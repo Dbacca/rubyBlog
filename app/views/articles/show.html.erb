@@ -1,14 +1,13 @@
-
-<!--Article content  -->
 <p>
   <strong>Title:</strong>
   <%= @article.title %>
 </p>
+
 <p>
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
-<!--Comments  -->
+
 <h2>Comments</h2>
 <% @article.comments.each do |comment| %>
   <p>
@@ -21,7 +20,7 @@
     <%= comment.body %>
   </p>
 <% end %>
-<!--Add new comment  -->
+
 <h2>Add a comment:</h2>
 <%= form_for([@article, @article.comments.build]) do |f| %>
   <p>
